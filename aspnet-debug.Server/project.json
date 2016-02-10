@@ -1,0 +1,27 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "aspnet-debug.Server Console Application",
+  "authors": [ "Andrew Luitink" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+  },
+
+  "commands": {
+    "aspnet_debug.Server": "run"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        "aspnet-debug.Shared": "1.0.0-*"
+      }
+    }
+  }
+}
