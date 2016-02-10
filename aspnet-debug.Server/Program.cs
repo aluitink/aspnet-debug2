@@ -9,9 +9,7 @@ namespace aspnet_debug.Server
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("ConfigFile: {0}", AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-
-            Log.Configure(new FileInfo(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile), new DirectoryInfo("logs"));
+            Log.Configure(new FileInfo("log4net.xml"), new DirectoryInfo("logs"));
             
             Log.Logger.Info("Server starting...");
             using (var server = new MonoDebugServer())
