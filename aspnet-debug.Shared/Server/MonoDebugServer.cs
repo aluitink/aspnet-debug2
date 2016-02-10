@@ -4,13 +4,14 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 
 namespace aspnet_debug.Shared.Server
 {
     public class MonoDebugServer : IDisposable
     {
         public const int TcpPort = 13001;
-        //private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly ILog logger = LogManager.GetLogger(typeof (MonoDebugServer));
         private readonly CancellationTokenSource cts = new CancellationTokenSource();
 
         private Task listeningTask;
@@ -32,11 +33,11 @@ namespace aspnet_debug.Shared.Server
         {
             while (true)
             {
-                //logger.Info("Waiting for client");
+                logger.Info("Waiting for client");
                 TcpClient client = tcp.AcceptTcpClient();
                 token.ThrowIfCancellationRequested();
 
-                //logger.Info("Accepted client: " + client.Client.RemoteEndPoint);
+                logger.Info("Accepted client: " + client.Client.RemoteEndPoint);
                 var clientSession = new ClientSession(client.Client);
                 Task.Factory.StartNew(clientSession.HandleSession, token);
             }
@@ -52,7 +53,7 @@ namespace aspnet_debug.Shared.Server
             }
             if (listeningTask != null)
                 Task.WaitAll(listeningTask);
-            //logger.Info("Closed MonoDebugServer");
+            logger.Info("Closed MonoDebugServer");
         }
 
         public void StartAnnouncing()
@@ -62,7 +63,7 @@ namespace aspnet_debug.Shared.Server
                 try
                 {
                     CancellationToken token = cts.Token;
-                    //logger.Trace("Start announcing");
+                    logger.Info("Start announcing");
                     using (var client = new UdpClient())
                     {
                         var ip = new IPEndPoint(IPAddress.Broadcast, 15000);
@@ -82,7 +83,7 @@ namespace aspnet_debug.Shared.Server
                 }
                 catch (Exception ex)
                 {
-                    //logger.Trace(ex);
+                    logger.Error("Failed to announce.", ex);
                 }
             });
         }

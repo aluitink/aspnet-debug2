@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "aspnet-debug.Shared Class Library",
   "authors": [ "Andrew Luitink" ],
@@ -12,7 +12,8 @@
     "System.Threading": "4.0.0",
     "System.Runtime": "4.0.0",
     "System.Runtime.Serialization.Xml": "4.0.0",
-    "System.Runtime.Serialization.Primitives": "4.0.0"
+    "System.Runtime.Serialization.Primitives": "4.0.0",
+    "log4net": "2.0.5"
   },
   "frameworks": {
     "net451": {
