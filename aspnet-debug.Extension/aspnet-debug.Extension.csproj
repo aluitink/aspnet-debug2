@@ -210,9 +210,9 @@
       <Project>{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}</Project>
       <Name>aspnet-debug.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\aspnet_debug.Debugger\aspnet_debug.Debugger.csproj">
+    <ProjectReference Include="..\aspnet_debug.Debugger\aspnet-debug.Debugger.csproj">
       <Project>{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}</Project>
-      <Name>aspnet_debug.Debugger</Name>
+      <Name>aspnet-debug.Debugger</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

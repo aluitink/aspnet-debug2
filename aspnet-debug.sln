@@ -7,7 +7,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aspnet-debug.Server", "aspn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.Shared", "aspnet-debug.Shared\aspnet-debug.Shared.csproj", "{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet_debug.Debugger", "aspnet_debug.Debugger\aspnet_debug.Debugger.csproj", "{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.Debugger", "aspnet_debug.Debugger\aspnet-debug.Debugger.csproj", "{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.Extension", "aspnet-debug.Extension\aspnet-debug.Extension.csproj", "{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}"
 EndProject

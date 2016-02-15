@@ -15,7 +15,6 @@ RUN curl -sSL https://get.docker.com/ | sh
 ADD ./wrapdocker /usr/local/bin/wrapdocker
 RUN chmod +x /usr/local/bin/wrapdocker
 
-
 COPY aspnet-debug.Shared/project.json /opt/aspnet-debug/aspnet-debug.Shared/
 COPY aspnet-debug.Server/project.json /opt/aspnet-debug/aspnet-debug.Server/
 
