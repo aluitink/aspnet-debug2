@@ -1,4 +1,4 @@
-FROM microsoft/aspnet:1.0.0-rc1-finial
+FROM microsoft/aspnet:1.0.0-rc1-final
 
 RUN apt-get update -qq && apt-get install -qqy \
     apt-transport-https \
