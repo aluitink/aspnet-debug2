@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("aspnet-debug.Shared")]
+[assembly: AssemblyTitle("aspnet_debug.Debugger")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("aspnet-debug.Shared")]
+[assembly: AssemblyProduct("aspnet_debug.Debugger")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("83eb69e8-1a23-4c9a-b8ef-2ea9fcd46473")]
+[assembly: Guid("050ba95c-dcdd-49a6-9a4d-47e23fb18f49")]
 
 // Version information for an assembly consists of the following four values:
 //

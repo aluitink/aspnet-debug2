@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aspnet-debug.Shared", "aspnet-debug.Shared\aspnet-debug.Shared.xproj", "{D7215B10-809D-4F39-91E0-9C4B4CBEB33E}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aspnet-debug.Server", "aspnet-debug.Server\aspnet-debug.Server.xproj", "{339D4412-A903-4B94-9F73-CB90480F7704}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aspnet-debug.Debugger", "aspnet-debug.Debugger\aspnet-debug.Debugger.xproj", "{55865C0D-F4F7-4939-B4BA-D80E074DEE07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.Shared", "aspnet-debug.Shared\aspnet-debug.Shared.csproj", "{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet_debug.Debugger", "aspnet_debug.Debugger\aspnet_debug.Debugger.csproj", "{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.Extension", "aspnet-debug.Extension\aspnet-debug.Extension.csproj", "{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-debug.TestClientConsole", "aspnet-debug.TestClientConsole\aspnet-debug.TestClientConsole.csproj", "{83BB28B1-5074-43C9-85AF-8DD0EDC68CEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E73415B4-D085-4D2C-A160-FC2ADD33064F}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		supervisord.conf = supervisord.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +25,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7215B10-809D-4F39-91E0-9C4B4CBEB33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7215B10-809D-4F39-91E0-9C4B4CBEB33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7215B10-809D-4F39-91E0-9C4B4CBEB33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7215B10-809D-4F39-91E0-9C4B4CBEB33E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{339D4412-A903-4B94-9F73-CB90480F7704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{339D4412-A903-4B94-9F73-CB90480F7704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{339D4412-A903-4B94-9F73-CB90480F7704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{339D4412-A903-4B94-9F73-CB90480F7704}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55865C0D-F4F7-4939-B4BA-D80E074DEE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55865C0D-F4F7-4939-B4BA-D80E074DEE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55865C0D-F4F7-4939-B4BA-D80E074DEE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55865C0D-F4F7-4939-B4BA-D80E074DEE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83EB69E8-1A23-4C9A-B8EF-2EA9FCD46473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050BA95C-DCDD-49A6-9A4D-47E23FB18F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4965D7D1-83EA-44B0-9E3D-AD36A34921E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BB28B1-5074-43C9-85AF-8DD0EDC68CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BB28B1-5074-43C9-85AF-8DD0EDC68CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BB28B1-5074-43C9-85AF-8DD0EDC68CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BB28B1-5074-43C9-85AF-8DD0EDC68CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
